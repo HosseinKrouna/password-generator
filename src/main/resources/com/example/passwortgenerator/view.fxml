@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_RIGHT" prefHeight="220.0" prefWidth="594.0" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.passwortgenerator.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Passwortgenerator" textAlignment="CENTER" wrappingWidth="439.13671875">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="447.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Passwort generieren:" wrappingWidth="109.83984375">
+               <HBox.margin>
+                  <Insets right="25.0" top="4.0" />
+               </HBox.margin>
+            </Text>
+            <HBox prefHeight="25.0" prefWidth="399.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="186.0" text="Sicherheitsstufe wählen">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="144.0" value="Bitte wählen">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+                  <Button mnemonicParsing="false" onAction="#onGenerateClick" prefHeight="25.0" prefWidth="127.0" text="generieren" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" layoutX="30.0" layoutY="30.0" prefHeight="25.0" prefWidth="447.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="112.0" text="Passwort: " textAlignment="CENTER" />
+            <TextField fx:id="passwordTf" alignment="CENTER" prefHeight="25.0" prefWidth="421.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onLogClick" prefHeight="25.0" prefWidth="84.0" text="Lade Liste">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
